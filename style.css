@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    background: #F4F4F4;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 52px;
+    padding-bottom: 21px;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    padding: 6px 12px;
+    font-weight: 400;
+    font-size: 12px;
+    background: #0271C7;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+    background: #27A1FF
+}
+
+.button:active {
+    background: #C2E4FE
+}
+
+.dop {
+
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10px 15px;
+    position: absolute;
+    z-index: 100;
+    margin-top: 10px;
+    filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.25));
+    border-radius: 6px;
+}
+
+.dop-info {
+    margin-bottom: 8px;
+    padding: 6px 12px;
+    border: 1px solid #CFCFCF;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.dop-button {
+    width: 80px;
+    cursor: pointer;
+}
+
+.search {
+    width: 210px;
+    padding: 6px 12px;
+    border: 1px solid #CFCFCF;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.search::placeholder {
+    color: #CFCFCF
+}
+
+.search-list {
+    display: none;
+    position: absolute;
+    max-width: 250px;
+    width: 200px;
+    height: inherit;
+
+    max-height: 200px;
+    top: 85px;
+    right: 150px;
+    padding: 10px 5px;
+    overflow: auto;
+    background-color: #fff;
+    box-shadow: inset 0px 0px 1px 2px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+}
+
+.search-div {
+    padding: 5px 6px;
+    border-bottom: 1px solid #6B6B6B;
+    cursor: pointer;
+}
+
+.search-div:last-child {
+    border-bottom: none
+}
+
+.search-div:hover {
+    background-color: #d7d4d4;
+}
+
+
+.calendar {
+    margin-bottom: 15px;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    color: #CFCFCF;
+    margin-right: 20px
+}
+
+.month {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.month-text {
+    margin: 0 24px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.month-day {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 2px 6px;
+    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+.month-icon {
+    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.month-icon:hover {
+    background: #6B6B6B;
+    color: white;
+}
+
+.month-icon:active {
+    background: #CFCFCF;
+    box-shadow: none;
+}
+
+
+.row {
+    display: flex;
+}
+
+.cell {
+    position: relative;
+    width: 143px;
+    height: 120px;
+    padding: 8px;
+    border: 1px solid #292929;
+    border-right: none;
+    border-bottom: none;
+}
+
+.cell:last-child {
+    border-right: 1px solid #292929;
+}
+
+.cell:hover {
+    background: #F4F4F4;
+    cursor: pointer;
+}
+
+.row:last-child .cell {
+    border-bottom: 1px solid #292929;
+}
+
+.cell>p {
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #6B6B6B;
+}
+
+.disabled {
+    background: #d7d4d4
+}
+
+.disabled:hover {
+    background: #d7d4d4;
+    cursor: default;
+}
+
+.active {
+    box-shadow: 0px 0px 10px 2px #0271C7;
+    cursor: pointer;
+    z-index: 50
+}
+
+.true {
+    background-color: #C2E4FE;
+}
+
+.true:hover {
+    background-color: #27A1FF;
+}
+
+.tg-chart-tooltip {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.25));
+}
+
+.tg-chart-tooltip::before {
+    display: block;
+    content: '';
+    background-image: url('./decorate.svg');
+    width: 10px;
+    height: 24px;
+    position: relative;
+    top: 36px;
+    left: -8px;
+}
+
+.toolp-content {
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    margin: 0 auto;
+    padding: 12px;
+    background-color: #fff;
+}
+
+.toolp-input {
+    margin-bottom: 8px;
+    width: inherut;
+    padding: 6px 12px;
+    border: 1px solid #CFCFCF;
+    box-shadow: inset 0px 0px 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
+.toolp-buttom {
+    padding: 2px 6px;
+    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-size: 12px;
+    margin-right: 20px;
+    cursor: pointer;
+}
